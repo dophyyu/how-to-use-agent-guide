@@ -18,7 +18,7 @@ WorkBuddy 的能力、界面和使用方式会持续变化。WorkBuddy Guide 希
 
 ## 最轻量的方式：提交 Issue
 
-如果暂时不想修改文件，可以在[本站 GitHub Issues](https://github.com/Lukanytsu7551/how-to-use-agent-guide/issues)中说明：
+如果暂时不想修改文件，可以在[本站 GitHub Issues](https://github.com/dophyyu/how-to-use-agent-guide/issues)中说明：
 
 1. 哪一页需要调整。
 2. 现在的问题是什么。
@@ -30,10 +30,10 @@ WorkBuddy 的能力、界面和使用方式会持续变化。WorkBuddy Guide 希
 1. Fork 或克隆仓库。
 2. 找到 `docs/bluebook/` 下对应章节的 `index.md`。
 3. 修改内容或在同目录的 `assets/` 中补充素材。
-4. 本地运行 `npm install` 和 `npm run docs:build`。
+4. 本地运行 `pnpm install` 和 `pnpm run docs:build`。
 5. 提交 Pull Request，并说明改动、原因和验证方式。
 
-完整规范见仓库根目录的 [CONTRIBUTING.md](https://github.com/Lukanytsu7551/how-to-use-agent-guide/blob/main/CONTRIBUTING.md)。
+完整规范见仓库根目录的 [CONTRIBUTING.md](https://github.com/dophyyu/how-to-use-agent-guide/blob/main/CONTRIBUTING.md)。
 
 ## 内容原则
 

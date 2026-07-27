@@ -6,11 +6,11 @@ brand
 
 ## Users
 
-How to Use Codex serves readers who want to use OpenAI Codex in real work. The audience includes first-time Codex users, developers bringing Codex into local projects, creators and knowledge workers using Codex for writing and research workflows, and team leads who need repeatable rules, examples, governance practices, and safety boundaries.
+How to Use Agent serves readers who want to use Codex or WorkBuddy in real work. The audience includes first-time Agent users, developers bringing Codex into local projects, creators and knowledge workers using Agents for writing and research workflows, and team leads who need repeatable rules, examples, governance practices, and safety boundaries.
 
 ## Product Purpose
 
-How to Use Codex is a practical tutorial and reference site for Codex. It helps readers choose the right entry point, complete a first task, understand advanced configuration and safety boundaries, reuse proven examples, and turn successful workflows into team-ready practice.
+How to Use Agent is a practical tutorial and reference site for Codex and WorkBuddy. It helps readers choose the right Agent, complete a first task, understand advanced configuration and safety boundaries, reuse proven examples, and turn successful workflows into team-ready practice.
 
 ## Brand Personality
 

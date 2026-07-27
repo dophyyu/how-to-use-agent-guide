@@ -2,7 +2,7 @@
 
 A Chinese learning center for choosing, using, and building reliable workflows with AI agents.
 
-[Read online](https://lukanytsu7551.github.io/how-to-use-agent-guide/) · [Contributing](./CONTRIBUTING_en.md) · [Security](./SECURITY.md) · [Code of Conduct](./CODE_OF_CONDUCT.md)
+[Read online](https://learn.dophyyu.cn/) · [Contributing](./CONTRIBUTING_en.md) · [Deployment](./DEPLOYMENT.md) · [Security](./SECURITY.md) · [Code of Conduct](./CODE_OF_CONDUCT.md)
 
 ## Guides
 
@@ -21,7 +21,7 @@ A Chinese learning center for choosing, using, and building reliable workflows w
 
 ## Local Development
 
-Node.js 22 and pnpm are required.
+Node.js 24 and pnpm 11.9.0 are required.
 
 ```bash
 pnpm install

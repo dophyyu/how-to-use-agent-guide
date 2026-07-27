@@ -2,7 +2,7 @@
 
 面向中文用户的 Agent 教程中心，帮助你选择适合自己的工具，并从第一个真实任务开始建立可复用的工作方式。
 
-[在线阅读](https://lukanytsu7551.github.io/how-to-use-agent-guide/) · [贡献指南](./CONTRIBUTING.md) · [安全政策](./SECURITY.md) · [行为准则](./CODE_OF_CONDUCT.md)
+[在线阅读](https://learn.dophyyu.cn/) · [贡献指南](./CONTRIBUTING.md) · [部署与回滚](./DEPLOYMENT.md) · [安全政策](./SECURITY.md) · [行为准则](./CODE_OF_CONDUCT.md)
 
 ## 学习什么
 
@@ -21,7 +21,7 @@
 
 ## 本地开发
 
-需要 Node.js 22 和 pnpm。
+需要 Node.js 24 和 pnpm 11.9.0。
 
 ```bash
 pnpm install
@@ -34,6 +34,8 @@ pnpm run dev
 pnpm run build
 pnpm run preview
 ```
+
+生产站点使用腾讯云 Nginx 静态托管，发布前请阅读 [部署与回滚](./DEPLOYMENT.md)。
 
 ## 参与贡献
 

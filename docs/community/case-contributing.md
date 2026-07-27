@@ -25,11 +25,11 @@ outline: false
 ## 提交步骤
 
 1. 搜索案例集和 WorkBuddy 教程目录，确认任务没有重复。
-2. Fork [how-to-use-agent-guide](https://github.com/Lukanytsu7551/how-to-use-agent-guide) 仓库。
+2. Fork [how-to-use-agent-guide](https://github.com/dophyyu/how-to-use-agent-guide) 仓库。
 3. 复制 `.github/CASE_TEMPLATE.md` 中的案例模板。
 4. 新建 `docs/cases/submissions/<case-slug>/index.md`。
 5. 将截图等素材放进同目录的 `assets/` 文件夹。
-6. 本地运行 `npm install` 和 `npm run docs:build`。
+6. 本地运行 `pnpm install` 和 `pnpm run docs:build`。
 7. 提交 Pull Request，并选择 Case 专用 PR 模板。
 
 推荐使用简短的英文小写目录名，例如：

@@ -2,10 +2,11 @@ import { defineConfig } from "vitepress";
 
 import { siteSidebar } from "./sidebar";
 import { configureMermaidMarkdown } from "./mermaid-markdown";
+import { createSeoHead } from "./seo";
 
-const siteUrl =
-  process.env.VITEPRESS_SITE_URL ||
-  "https://lukanytsu7551.github.io/how-to-use-agent-guide/";
+const siteUrl = (
+  process.env.VITEPRESS_SITE_URL || "https://learn.dophyyu.cn/"
+).replace(/\/$/, "");
 
 export default defineConfig({
   lang: "zh-CN",
@@ -13,7 +14,7 @@ export default defineConfig({
   titleTemplate: ":title | How to Use Agent",
   description:
     "Codex 与 WorkBuddy 的使用教程中心，帮助你选择合适的 Agent，并从快速上手、进阶教程、实战案例到问题排查建立可靠工作流。",
-  base: "/how-to-use-agent-guide/",
+  base: "/",
   cleanUrls: true,
   lastUpdated: true,
   srcExclude: [
@@ -27,13 +28,14 @@ export default defineConfig({
   sitemap: {
     hostname: siteUrl,
   },
+  transformHead: (context) => createSeoHead(siteUrl, context),
   head: [
     [
       "link",
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: "/how-to-use-agent-guide/favicon.svg?v=3",
+        href: "/favicon.svg?v=3",
       },
     ],
     ["meta", { name: "theme-color", content: "#17352a" }],
@@ -97,7 +99,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/Lukanytsu7551/how-to-use-agent-guide",
+        link: "https://github.com/dophyyu/how-to-use-agent-guide",
       },
     ],
     search: {
@@ -120,12 +122,13 @@ export default defineConfig({
     },
     editLink: {
       pattern:
-        "https://github.com/Lukanytsu7551/how-to-use-agent-guide/edit/main/docs/:path",
+        "https://github.com/dophyyu/how-to-use-agent-guide/edit/main/docs/:path",
       text: "在 GitHub 上改进此页",
     },
     footer: {
-      message: "MIT Licensed | Modified for How to Use Agent",
-      copyright: "Copyright © 2026 Lukanytsu7551",
+      message:
+        '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2026096174号</a><span aria-hidden="true">·</span><a class="public-security-link" href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002014919" target="_blank" rel="noreferrer"><img src="/beian-icon.png" alt="" width="20" height="20">粤公网安备44030002014919号</a>',
+      copyright: "Copyright © 2026 How to Use Agent Contributors",
     },
   },
 });
