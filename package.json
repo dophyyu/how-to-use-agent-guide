@@ -6,7 +6,7 @@
   "description": "Codex 与 WorkBuddy 的使用教程中心",
   "packageManager": "pnpm@11.9.0",
   "engines": {
-    "node": ">=20 <25"
+    "node": ">=24 <25"
   },
   "scripts": {
     "dev": "vitepress dev docs --host 127.0.0.1",

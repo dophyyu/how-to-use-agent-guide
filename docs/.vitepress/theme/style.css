@@ -1332,6 +1332,24 @@ body.wb-lightbox-open {
   color: var(--vp-c-brand-1);
 }
 
+.VPFooter .message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.VPFooter .public-security-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.VPFooter .public-security-link img {
+  flex: 0 0 20px;
+}
+
 .VPLocalSearchBox .shell {
   border: 1px solid var(--wb-ink) !important;
   border-radius: 6px !important;
