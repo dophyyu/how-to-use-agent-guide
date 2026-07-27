@@ -1,6 +1,6 @@
 # How to Use Agent 部署与回滚
 
-> 状态：本地验证通过，待生产变更确认
+> 状态：HTTP 静态 release 已发布，待 DNS 与 HTTPS
 > 最后核验：2026-07-27
 
 ## 部署卡
@@ -65,6 +65,21 @@ rollback_method: 将 current 恢复到上一 release；首次发布则停用教�
 
 以上截图保存在本次 Codex 可视化工作区，不纳入项目仓库。
 
+## 当前发布
+
+```text
+release_id: 20260727155640-6cc9cf2-learn
+current: /opt/how-to-use-agent-guide/releases/20260727155640-6cc9cf2-learn
+archive_sha256: 52adbba634a4f9f9cd1d0ed6bfe5fb352f0be6f6f7e56f893aa1a046a4a09d75
+published_at: 2026-07-27
+```
+
+- [x] 静态 release 已上传并切换 `current`。
+- [x] 教程站 HTTP Nginx 配置已启用，`sudo nginx -t` 通过。
+- [x] 使用指定 Host 验证首页、Codex、WorkBuddy 返回 200，未知路径返回 404。
+- [ ] DNSPod 新增 `learn` A 记录并指向 `1.12.247.55`。
+- [ ] 为 `learn.dophyyu.cn` 签发证书并切换 HTTPS 配置。
+
 ## 本地预检与构建
 
 ```powershell
@@ -83,6 +98,26 @@ pnpm build
 - 首页包含 `粤ICP备2026096174号`、`粤公网安备44030002014919号` 和公安备案图标。
 - Codex、WorkBuddy、搜索、静态资源及 404 页面可访问。
 - 记录构建产物体积，确认服务器空间足够。
+
+## GitHub 内容更新后的发布流程
+
+生产服务器只保存构建后的静态文件，不直接拉取 GitHub，也不会自动发布。日常更新统一从本地仓库发起：
+
+1. 确认当前工作区没有需要保留但尚未提交的改动。
+2. 切换到生产分支并快进同步 GitHub：
+
+```powershell
+git switch main
+git pull --ff-only origin main
+```
+
+3. 当 `package.json` 或 `pnpm-lock.yaml` 变化时执行 `pnpm install --frozen-lockfile`。
+4. 运行 `pnpm test` 和 `pnpm build`；任一步失败都停止发布。
+5. 只打包 `docs/.vitepress/dist/`，创建新的 release 目录并上传到服务器。
+6. 在服务器核验新 release 后，将 `/opt/how-to-use-agent-guide/current` 切换到它。
+7. 验证首页、教程入口、搜索、静态资源、404、备案页脚和原有子站。
+
+首次将本部署适配合并到 `main` 前，不要在本地用 `git pull` 覆盖当前部署分支；先通过 GitHub Pull Request 合并，再按上述流程维护。
 
 ## 发布结构
 
